@@ -424,5 +424,3 @@ sudo rm /etc/kubernetes/manifests/monitoring-agent.yaml
 - Document scheduling decisions
 - Test failure scenarios
 - Automate deployments for reproducibility
-```
-
