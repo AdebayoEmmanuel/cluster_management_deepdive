@@ -1,0 +1,30 @@
+# fixed-broken-app.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: broken-app
+  namespace: ecommerce
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: broken
+  template:
+    metadata:
+      labels:
+        app: broken
+    spec:
+      nodeSelector:
+        tier: frontend
+      tolerations:
+      - key: workload
+        operator: Equal
+        value: frontend
+        effect: NoSchedule
+      containers:
+      - name: app
+        image: nginx:alpine
+        resources:
+          requests:
+            cpu: 200m  # Fixed: Reasonable CPU request
+            memory: 256Mi  # Fixed: Reasonable memory request
