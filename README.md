@@ -1,6 +1,4 @@
 
-
-```markdown
 # Kubernetes E-Commerce Platform Deployment
 
 Production-grade Kubernetes deployment demonstrating advanced scheduling, service discovery, high availability, and cluster management concepts.
@@ -427,3 +425,4 @@ sudo rm /etc/kubernetes/manifests/monitoring-agent.yaml
 - Test failure scenarios
 - Automate deployments for reproducibility
 ```
+
